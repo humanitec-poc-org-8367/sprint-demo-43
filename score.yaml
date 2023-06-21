@@ -1,10 +1,9 @@
 apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
-{
-  "owner": "pat",
-  "humanitec.com/type": "dev-eu-01"
-}  
+  labels:
+    app: "sprint-demo-43"
+  replicas: 2  
 service:
   ports:
     www:
