@@ -1,8 +1,9 @@
 apiVersion: score.dev/v1b1
 
 metadata:
-  name: "sprint-demo-43-akshita"
-  namespace: test
+  name: "sprint-demo-43"
+  labels:
+    environment: dev-test
 service:
   ports:
     www:
