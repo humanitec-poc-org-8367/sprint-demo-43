@@ -1,10 +1,7 @@
 apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
-{
-  "owner": "pat",
-  "humanitec.com/type": "dev-eu-01"
-}  
+  owner: "ukg"
 service:
   ports:
     www:
