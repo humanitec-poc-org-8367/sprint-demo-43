@@ -1,7 +1,7 @@
 apiVersion: score.dev/v1b1
 
 metadata:
-  name: "sprint-demo-43"
+  name: "sprint-demo-43-akshita"
   namespace: test
 service:
   ports:
