@@ -12,9 +12,10 @@ containers:
     variables:
       HELLO: WORLD
       app: sprint-demo-43
-labels:
-  app: "sprint-demo-43" 
-replicas: 3
+      app: sprint-demo-43
+    labels:
+      app: "sprint-demo-43" 
+    replicas: 3
 resources:
   dns: # We need a DNS record to point to the service 
     type: dns
