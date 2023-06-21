@@ -3,7 +3,7 @@ apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
   labels:
-    environment: dev-test
+    environment-1: dev-test-2
 service:
   ports:
     www:
