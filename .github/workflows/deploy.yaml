@@ -63,9 +63,6 @@ jobs:
                       type: prefix
                       port: 80
           containers:
-            labels:
-              app: sprint-demo-43 
-            replicas: 3
             frontend:
               image: $ECR/$IMAGE:$TAG
           EOF
