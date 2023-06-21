@@ -1,9 +1,6 @@
 apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
-  labels:
-    app: "sprint-demo-43"
-  replicas: 2  
 service:
   ports:
     www:
@@ -15,7 +12,9 @@ containers:
     variables:
       HELLO: WORLD
       app: sprint-demo-43
-
+labels:
+  app: "sprint-demo-43" 
+replicas: 3
 resources:
   dns: # We need a DNS record to point to the service 
     type: dns
