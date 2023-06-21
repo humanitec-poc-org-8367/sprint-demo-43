@@ -12,7 +12,6 @@ containers:
     variables:
       HELLO: WORLD
       app: sprint-demo-43
-      app: sprint-demo-43
     labels:
       app: "sprint-demo-43" 
     replicas: 3
