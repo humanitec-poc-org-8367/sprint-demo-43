@@ -2,8 +2,8 @@ apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
   labels:
-    environment-1: dev-test-2
-    app: sprint-demo-43
+    environment-1: "dev-test-2"
+    app: "sprint-demo-43"
 service:
   ports:
     www:
