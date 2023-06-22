@@ -1,7 +1,6 @@
 apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
-  owner: "ukg"
 service:
   ports:
     www:
@@ -12,8 +11,6 @@ containers:
   frontend:
     variables:
       HELLO: WORLD
-      app: sprint-demo-43
-
 resources:
   dns: # We need a DNS record to point to the service 
     type: dns
