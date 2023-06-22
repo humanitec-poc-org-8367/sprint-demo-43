@@ -1,6 +1,9 @@
 apiVersion: score.dev/v1b1
 metadata:
   name: "sprint-demo-43"
+spec:
+  "labels":
+      "tags": "test"
 service:
   ports:
     www:
