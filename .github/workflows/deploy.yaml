@@ -2,7 +2,7 @@ name: Deploy Sprint-demo-43
 
 on:
   push:
-    branches: main
+    branches: akshitapareek24-patch-2
 
 concurrency:
   group: ${{ github.ref }}
@@ -55,6 +55,9 @@ jobs:
           cat <<EOF > humanitec.score.yaml
           apiVersion: humanitec.org/v1b1
           spec:
+            labels:
+              testapp: testlabel
+            replicas: 3  
             ingress:
               rules:
                 "\${resources.dns}": # This is the DNS record that we defined in the resources section
@@ -65,6 +68,13 @@ jobs:
           containers:
             frontend:
               image: $ECR/$IMAGE:$TAG
+              resources:
+                requests:
+                  memory: 64Mi
+                  cpu: 100m
+                limits:
+                  memory: 128Mi
+                  cpu: 250m  
           EOF
 
           ./score-humanitec delta --env development1 --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
