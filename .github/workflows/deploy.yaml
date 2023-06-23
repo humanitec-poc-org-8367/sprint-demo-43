@@ -71,10 +71,10 @@ jobs:
               resources:
                 requests:
                   memory: "64Mi"
-                  cpu: "250m"
+                  cpu: "100m"
                 limits:
                   memory: "128Mi"
-                  cpu: "500m"  
+                  cpu: "250m"  
           EOF
 
           ./score-humanitec delta --env development1 --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
