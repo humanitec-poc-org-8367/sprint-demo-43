@@ -2,7 +2,7 @@ name: Deploy Sprint-demo-43
 
 on:
   push:
-    branches: akshitapareek24-patch-2
+    branches: main
 
 concurrency:
   group: ${{ github.ref }}
@@ -77,4 +77,4 @@ jobs:
                   cpu: 250m  
           EOF
 
-          ./score-humanitec delta --env development1 --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
+          ./score-humanitec delta --env staging --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
