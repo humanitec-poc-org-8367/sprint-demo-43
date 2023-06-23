@@ -68,10 +68,13 @@ jobs:
           containers:
             frontend:
               image: $ECR/$IMAGE:$TAG
-              livenessProbe:
-                httpGet:
-                  path: /healthz
-                  port: 80  
+              resources:
+                requests:
+                  memory: "64Mi"
+                  cpu: "250m"
+                limits:
+                  memory: "128Mi"
+                  cpu: "500m"  
           EOF
 
-          ./score-humanitec delta --env development --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
+          ./score-humanitec delta --env development1 --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
