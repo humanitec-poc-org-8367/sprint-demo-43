@@ -69,10 +69,10 @@ jobs:
           containers:
             frontend:
               image: $ECR/$IMAGE:$TAG
-            livenessProbe:
-              httpGet:
-                path: /healthz
-                port: 80  
+              livenessProbe:
+                httpGet:
+                  path: /healthz
+                  port: 80  
           EOF
 
           ./score-humanitec delta --env development --overrides ./humanitec.score.yaml --app sprint-demo-43 --org="${{ secrets.HUMANITEC_ORG_ID_POC_12 }}" --token "${{ secrets.HUMANITEC_TOKEN_POC_12 }}" --deploy
