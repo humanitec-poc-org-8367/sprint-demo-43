@@ -54,10 +54,9 @@ jobs:
 
           cat <<EOF > humanitec.score.yaml
           apiVersion: humanitec.org/v1b1
-          metadata:
+          spec:
             labels:
               testapp: testlabel
-          spec:
             replicas: 3  
             ingress:
               rules:
